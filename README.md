@@ -7,3 +7,5 @@ Implemented Modern Greek. Took a long time to establish minimum characters, not 
 
 https://nanjizal.github.io/glyphLetters/binDom/index.html  ( just press the keyboard and will trace out ).
 
+also some ukraine support
+https://nanjizal.github.io/glyphLetters/binDom/indexUkraine.html
