@@ -296,8 +296,10 @@ glyphLetters_GreekKeyboardDom.prototype = {
 		}
 		if(char != "not found") {
 			this.letters += char;
+		} else {
+			this.letters += e.key;
 		}
-		haxe_Log.trace(this.letters,{ fileName : "src/glyphLetters/GreekKeyboardDom.hx", lineNumber : 31, className : "glyphLetters.GreekKeyboardDom", methodName : "keyUp"});
+		haxe_Log.trace(this.letters,{ fileName : "src/glyphLetters/GreekKeyboardDom.hx", lineNumber : 33, className : "glyphLetters.GreekKeyboardDom", methodName : "keyUp"});
 	}
 };
 var haxe_Log = function() { };

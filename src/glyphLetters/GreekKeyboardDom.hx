@@ -27,6 +27,8 @@ class GreekKeyboardDom{
         var char = GreekBasic.fromQwerty( e.key );
         if( char != notFound ){
             letters += char;
+        } else {
+            letters += e.key;
         }
         trace(letters);
     }
