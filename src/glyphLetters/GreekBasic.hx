@@ -1,6 +1,6 @@
 package glyphLetters;
 
-enum abstract BasicGreek_( String ) from String to String {
+enum abstract GreekBasic_( String ) from String to String {
     var alpha   = 'α';
     var alpha_acute = 'ά';
     var beta    = 'β';
@@ -26,7 +26,7 @@ enum abstract BasicGreek_( String ) from String to String {
     var omicron = 'ο';
     var omicron_acute = 'ό';
     var pi      = 'π';
-    var rho     = 'ρ'
+    var rho     = 'ρ';
     var sigma   = 'σ';
     var tau     = 'τ';
     var upsilon = 'υ';
@@ -55,8 +55,8 @@ enum abstract BasicGreek_( String ) from String to String {
     var IOTA_ACUTE = 'Ί';
     var IOTA_DIAERESI = 'Ϊ';
     var IOTA_DIALYTIA_TONOS = 'ΐ';
-    var KAPA    = 'Κ';
-    var LAMDA   = 'Λ';
+    var KAPPA    = 'Κ';
+    var LAMBDA   = 'Λ';
     var MU      = 'Μ';
     var NU      = 'Ν';
     var XI      = 'Ξ';
@@ -76,13 +76,14 @@ enum abstract BasicGreek_( String ) from String to String {
     var OMEGA_ACUTE = 'Ώ';
 
     var SIGMA3 = 'Ϲ';
+    var notFound = 'not found';
 }
 
-abstract BasicGreek( BasicGreek ) from BasicGreek_ to BasicGreek_ {
-    public function new( basicGreek: BasicGreek_ ){
+abstract GreekBasic( GreekBasic_ ) from GreekBasic_ to GreekBasic_ {
+    public function new( basicGreek: GreekBasic_ ){
         this = basicGreek;
     }
-    public static inline function fromQwerty( str: String ): BasicGreek_ {
+    public static inline function fromQwerty( str: String ): GreekBasic_ {
         return switch( str ){
             case 'q': iota_diaeresi;
             case 'w': sigma2;
@@ -103,7 +104,7 @@ abstract BasicGreek( BasicGreek ) from BasicGreek_ to BasicGreek_ {
             case 'h': eta;
             case 'j': epsilon;
             case 'k': kappa;
-            case 'l': lamda;
+            case 'l': lambda;
             
             case 'z': zeta;
             case 'x': chi;
@@ -132,7 +133,7 @@ abstract BasicGreek( BasicGreek ) from BasicGreek_ to BasicGreek_ {
             case 'H': ETA;
             case 'J': XI;
             case 'K': KAPPA;
-            case 'L': LAMDA;
+            case 'L': LAMBDA;
                     
             case 'Z': ZETA;
             case 'X': CHI;
@@ -141,6 +142,7 @@ abstract BasicGreek( BasicGreek ) from BasicGreek_ to BasicGreek_ {
             case 'B': BETA;
             case 'N': NU;
             case 'M': MU;
+            case _: notFound;
         } 
     }
 }

@@ -1,0 +1,8 @@
+-js binDom/testGreek.js
+-cp src
+-lib htmlHelper
+-main glyphLetters.GreekKeyboardDom
+#-D js-flatten 
+--next
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="testGreek.js"></script></body></html>' >binDom/index.html
+-cmd open binDom/index.html
